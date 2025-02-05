@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Grid</title>
+    <style>
+        /* Grid container */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+            gap: 20px; /* Space between items */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Grid item styles */
+        .city-card {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for city cards */
+        .city-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading styles */
+        .city-card h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Description text */
+        .city-card p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="city-grid">
+        <!-- Mumbai Card -->
+        <div class="city-card">
+            <h2>Mumbai</h2>
+            <p>Explore the vibrant city of Mumbai, known for its bustling streets, historical landmarks, and famous beaches like Juhu and Marine Drive.</p>
+        </div>
+
+        <!-- Pune Card -->
+        <div class="city-card">
+            <h2>Pune</h2>
+            <p>Pune is a cultural hub, famous for its beautiful gardens, temples, and educational institutions. Enjoy a mix of history and modern life.</p>
+        </div>
+
+        <!-- Nagpur Card -->
+        <div class="city-card">
+            <h2>Nagpur</h2>
+            <p>Nagpur is known for its historical sites, orange orchards, and peaceful surroundings. It's a great place to explore nature and culture.</p>
+        </div>
+    </div>
+
+</body>
+</html>
