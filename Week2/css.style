@@ -1,0 +1,16 @@
+/* External CSS file - styles.css */
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e0f7fa;
+}
+
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+}
