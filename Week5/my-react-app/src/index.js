@@ -1,11 +1,13 @@
+// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom/client';  // Used for React 18
+import './index.css';  // Default styles (you can modify it)
+import App from './App';  // The main app component
 
-ReactDOM.render(
+// Create a root element and render the App component
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

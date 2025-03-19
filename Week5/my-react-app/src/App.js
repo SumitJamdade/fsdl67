@@ -1,44 +1,30 @@
-import React, { useState } from 'react';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';  // Import React and useState hook
+import './App.css';  // Import the styles for the app
 
 function App() {
-  const [task, setTask] = useState('');
-  const [tasks, setTasks] = useState([]);
+  // Declare state variable "count" with initial value 0
+  const [count, setCount] = useState(0);
 
-  const addTask = () => {
-    if (task) {
-      setTasks([...tasks, task]);
-      setTask('');
-    }
+  // Function to increment the count
+  const increment = () => {
+    setCount(count + 1);
   };
 
-  const removeTask = (index) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
+  // Function to decrement the count
+  const decrement = () => {
+    setCount(count - 1);
   };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>To-Do List</h1>
-        <div>
-          <input
-            type="text"
-            placeholder="Enter a task"
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-          />
-          <button onClick={addTask}>Add Task</button>
-        </div>
-        <ul>
-          {tasks.map((task, index) => (
-            <li key={index}>
-              {task}
-              <button onClick={() => removeTask(index)}>Delete</button>
-            </li>
-          ))}
-        </ul>
-      </header>
+      <h1>Counter App</h1>
+      <div className="counter">
+        {/* Display the current count */}
+        <button onClick={decrement}>Decrement</button>
+        <span className="count">{count}</span>
+        <button onClick={increment}>Increment</button>
+      </div>
     </div>
   );
 }
